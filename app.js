@@ -9,7 +9,8 @@ const upsert = (array, element) => {
     // eslint-disable-next-line no-param-reassign
     if (i > -1) array[i] = element;
     else array.push(element);
-  }
+};
+
 const discordClient = new Client({ intents: [
     GatewayIntentBits.DirectMessages,
     GatewayIntentBits.Guilds,
