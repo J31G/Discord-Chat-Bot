@@ -26,7 +26,7 @@ discordClient.on('messageCreate', async (message) => {
     if (message.author.bot) return;
 
     // Only work in a set channel
-    if (message?.channel?.id !== '1166064033632366643') return;
+    if (!['1166064033632366643','814851873299103825'].includes(message?.channel?.id)) return;
 
     // Get User token
     const userToken = activeChats.filter((user) => user?.id === message?.author?.id)[0]?.token;
